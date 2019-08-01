@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--common-->
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_normal">8dp</dimen>
+    <dimen name="spacing_height">16dp</dimen>
+    <dimen name="spacing_32">32dp</dimen>
+
+    <!--cell apod-->
+    <dimen name="cell_apod_width_img">128dp</dimen>
+    <dimen name="cell_apod_height_img">128dp</dimen>
+    <dimen name="info_apod_height_img">200dp</dimen>
+
+</resources>
