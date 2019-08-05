@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--common-->
-    <dimen name="spacing_small">4dp</dimen>
-    <dimen name="spacing_normal">8dp</dimen>
-    <dimen name="spacing_height">16dp</dimen>
-    <dimen name="spacing_32">32dp</dimen>
+    <dimen name="spacing_small_dp">4dp</dimen>
+    <dimen name="spacing_normal_dp">8dp</dimen>
+    <dimen name="spacing_large_dp">16dp</dimen>
+    <dimen name="spacing_xlarge_dp">32dp</dimen>
+    <dimen name="font_size_title_sp">20sp</dimen>
+    <dimen name="font_size_text_sp">14sp</dimen>
+    <dimen name="font_size_small_text_sp">8sp</dimen>
 
     <!--cell apod-->
     <dimen name="cell_apod_width_img">128dp</dimen>

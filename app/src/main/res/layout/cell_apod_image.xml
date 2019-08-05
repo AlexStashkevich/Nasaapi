@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="imageData"
+                type="by.psu.nasaapi.model.Apod"/>
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            android:layout_margin="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/cellApodImageImg"
+                    android:layout_width="@dimen/cell_apod_width_img"
+                    android:layout_height="@dimen/cell_apod_height_img"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[1]"
+                    app:imageUrl="@{imageData.url}"
+                    android:contentDescription="@string/apodImgDescription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" android:scaleType="centerCrop"/>
+            <TextView
+                    android:id="@+id/cellApodImageTitleTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/cell_apod_title"
+                    android:text="@{imageData.title}"
+                    android:layout_marginStart="@dimen/spacing_normal_dp"
+                    android:layout_marginTop="@dimen/spacing_normal_dp"
+                    android:layout_marginEnd="@dimen/spacing_normal_dp"
+                    app:layout_constraintStart_toEndOf="@+id/cellApodImageImg"
+                    app:layout_constraintTop_toTopOf="@+id/cellApodImageImg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/cellApodImageCopyrightTV"/>
+            <TextView
+                    android:id="@+id/cellApodImageCopyrightTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/cell_apod_copyright"
+                    android:text="@{imageData.copyright}"
+                    android:layout_marginEnd="@dimen/spacing_normal_dp"
+                    app:layout_constraintEnd_toStartOf="@id/cellApodImageDateTV"
+                    app:layout_constraintBottom_toBottomOf="@+id/cellApodImageImg"
+                    app:layout_constraintStart_toEndOf="@+id/cellApodImageImg"
+                    android:layout_marginStart="@dimen/spacing_normal_dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cellApodImageTitleTV"
+                    android:layout_marginBottom="@dimen/spacing_normal_dp"/>
+            <TextView
+                    android:id="@+id/cellApodImageDateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/cell_apod_date"
+                    android:text="@{imageData.date}"
+                    android:layout_marginStart="@dimen/spacing_normal_dp"
+                    android:layout_marginEnd="@dimen/spacing_normal_dp"
+                    app:layout_constraintStart_toEndOf="@+id/cellApodImageCopyrightTV"
+                    app:layout_constraintTop_toTopOf="@+id/cellApodImageCopyrightTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/cellApodImageCopyrightTV"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

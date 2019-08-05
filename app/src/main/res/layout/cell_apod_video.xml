@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="videoData"
+                type="by.psu.nasaapi.model.Apod"/>
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            android:layout_margin="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/cellApodVideoImg"
+                    android:layout_width="@dimen/cell_apod_width_img"
+                    android:layout_height="@dimen/cell_apod_height_img"
+                    app:srcCompat="@drawable/ic_play"
+                    android:contentDescription="@string/apodVideoDescription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                    android:id="@+id/cellApodVideoTitleTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/cell_apod_title"
+                    android:text="@{videoData.title}"
+                    android:layout_marginStart="@dimen/spacing_normal_dp"
+                    android:layout_marginTop="@dimen/spacing_normal_dp"
+                    android:layout_marginEnd="@dimen/spacing_normal_dp"
+                    app:layout_constraintStart_toEndOf="@+id/cellApodVideoImg"
+                    app:layout_constraintTop_toTopOf="@+id/cellApodVideoImg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/cellApodVideoDateTV"/>
+            <TextView
+                    android:id="@+id/cellApodVideoDateTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/cell_apod_date"
+                    android:text="@{videoData.date}"
+                    android:layout_marginEnd="@dimen/spacing_normal_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cellApodVideoImg"
+                    android:layout_marginStart="@dimen/spacing_normal_dp"
+                    android:layout_marginBottom="@dimen/spacing_normal_dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cellApodVideoImg"
+                    app:layout_constraintTop_toBottomOf="@+id/cellApodVideoTitleTV"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

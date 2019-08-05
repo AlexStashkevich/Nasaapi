@@ -7,12 +7,16 @@
     <string name="cell_apod_date">date</string>
     <string name="cell_apod_title">title</string>
 
-    <!--info(fragment) apod-->
+    <!--info(fragment) image apod-->
     <string name="info_apod_explanation">explanation</string>
     <string name="info_title_download_section">Скачать</string>
     <string name="info_label_normal">Стандартное</string>
     <string name="apodUrl">download url</string>
     <string name="info_label_hd">HD</string>
-    <string name="actionSearch">Найти по дате</string>
     <string name="infoApodImgTransitionName">infoApodImg</string>
+
+    <!--info(fragment) video apod-->
+    <string name="apodVideoDescription">Видео дня</string>
+    <string name="info_video_label_source">Источник</string>
+    <string name="info_video_label_url">Ссылка</string>
 </resources>

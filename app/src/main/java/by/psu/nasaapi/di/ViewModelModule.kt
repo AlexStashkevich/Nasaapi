@@ -3,6 +3,7 @@ package by.psu.nasaapi.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import by.psu.nasaapi.ui.data.DataViewModel
+import by.psu.nasaapi.ui.date.DateViewModel
 import by.psu.nasaapi.viewmodel.ViewModelFactory
 import dagger.Binds
 import dagger.Module
@@ -14,7 +15,12 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(DataViewModel::class)
-    abstract fun bindDataViewModel(abiturientViewModel: DataViewModel): ViewModel
+    abstract fun bindDataViewModel(dataViewModel: DataViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(DateViewModel::class)
+    abstract fun bindDateViewModel(dateViewModel: DateViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory

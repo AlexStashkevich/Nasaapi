@@ -7,7 +7,6 @@ import by.psu.nasaapi.db.ApodDao
 import by.psu.nasaapi.db.NasaDataBase
 import by.psu.nasaapi.repository.Repository
 import by.psu.nasaapi.repository.RepositoryImp
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -23,7 +22,6 @@ class AppModule {
         return Retrofit.Builder()
             .baseUrl("https://api.nasa.gov/")
             .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
             .create(NasaApi::class.java)
     }

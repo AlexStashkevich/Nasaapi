@@ -17,7 +17,6 @@ class FragmentBindingAdapters @Inject constructor(val fragment: Fragment) {
     ) {
         Glide.with(fragment)
             .load(url)
-            .centerCrop()
             .listener(listener)
             .into(imageView)
     }

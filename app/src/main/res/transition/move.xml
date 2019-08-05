@@ -5,8 +5,3 @@
     <changeClipBounds/>
     <changeImageTransform/>
 </transitionSet>
-
-<!--
-<transitionManager xmlns:android="http://schemas.android.com/apk/res/android">
-
-</transitionManager>-->

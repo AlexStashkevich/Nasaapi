@@ -1,22 +1,23 @@
 package by.psu.nasaapi.repository
 
 import androidx.lifecycle.LiveData
+import by.psu.nasaapi.model.ApiResponse
 import by.psu.nasaapi.model.Apod
-import kotlinx.coroutines.Deferred
+import retrofit2.Response
 
 interface Repository {
     /**
-     * Получение сегодняшнего изображение от сервиса Nasa
+     * Безопасное получение данных
      */
-    suspend fun fetchApodAsync(map: Map<String, String>): Deferred<Apod>
+    suspend fun safeFetch(map: Map<String, String>):ApiResponse<Apod>
 
     /**
-     * Получение списка сохраненных изображенией
+     * Получение observable списка сохраненных данных
      */
-    suspend fun getApods(): List<Apod>
+    fun getApodsLiveData(): LiveData<List<Apod>>
 
     /**
-     * Получение сохраненного изображения
+     * Получение сохраненных данных
      */
     suspend fun getApod(date: String): Apod
 
@@ -24,4 +25,9 @@ interface Repository {
      * Сохранение результата
      */
     suspend fun insert(data: Apod)
+
+    /**
+     * Удаление элемента
+     */
+    suspend fun delete(apod: Apod)
 }
