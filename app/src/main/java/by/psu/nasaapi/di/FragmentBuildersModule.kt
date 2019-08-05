@@ -1,7 +1,7 @@
 package by.psu.nasaapi.di
 
 import by.psu.nasaapi.ui.data.DataFragment
-import by.psu.nasaapi.ui.date.DatePickerDialogFragment
+import by.psu.nasaapi.ui.datedf.DatePickerDialogFragment
 import by.psu.nasaapi.ui.image.ImageFragmentDialog
 import by.psu.nasaapi.ui.info.InfoImageFragment
 import by.psu.nasaapi.ui.info.InfoVideoFragment

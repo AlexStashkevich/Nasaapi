@@ -12,7 +12,6 @@ import by.psu.nasaapi.databinding.CellApodImageBinding
 import by.psu.nasaapi.databinding.CellApodVideoBinding
 import by.psu.nasaapi.model.Apod
 import by.psu.nasaapi.ui.common.AutoUpdatableAdapter
-import by.psu.nasaapi.ui.data.viewholder.BaseViewHolder
 import kotlinx.android.synthetic.main.cell_apod_image.view.*
 import kotlin.properties.Delegates
 
@@ -20,7 +19,6 @@ class ApodRecycler(
     private val dataBindingComponent: DataBindingComponent
 ): RecyclerView.Adapter<BaseViewHolder<*>>(), AutoUpdatableAdapter {
 
-    //prop
     private var apodList: List<Apod> by Delegates.observable(emptyList()) {
             _, old, new ->
         autoNotify(old, new) { o, n -> o.date == n.date }

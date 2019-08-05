@@ -1,4 +1,4 @@
-package by.psu.nasaapi.ui.data.viewholder
+package by.psu.nasaapi.ui.data
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

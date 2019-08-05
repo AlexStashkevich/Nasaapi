@@ -55,6 +55,6 @@
                 android:name="imageUrl"
                 app:argType="string"/>
     </dialog>
-    <dialog android:id="@+id/datePickerDialogFragment" android:name="by.psu.nasaapi.ui.date.DatePickerDialogFragment"
+    <dialog android:id="@+id/datePickerDialogFragment" android:name="by.psu.nasaapi.ui.datedf.DatePickerDialogFragment"
     />
 </navigation>

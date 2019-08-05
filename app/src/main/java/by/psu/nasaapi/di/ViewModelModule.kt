@@ -3,7 +3,7 @@ package by.psu.nasaapi.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import by.psu.nasaapi.ui.data.DataViewModel
-import by.psu.nasaapi.ui.date.DateViewModel
+import by.psu.nasaapi.ui.datedf.DateViewModel
 import by.psu.nasaapi.viewmodel.ViewModelFactory
 import dagger.Binds
 import dagger.Module

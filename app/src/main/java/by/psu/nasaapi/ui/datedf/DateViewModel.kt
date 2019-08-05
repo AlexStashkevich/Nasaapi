@@ -1,4 +1,4 @@
-package by.psu.nasaapi.ui.date
+package by.psu.nasaapi.ui.datedf
 
 import androidx.lifecycle.ViewModel
 import by.psu.nasaapi.model.ApiResponse
